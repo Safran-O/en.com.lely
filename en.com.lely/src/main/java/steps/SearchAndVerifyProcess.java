@@ -7,20 +7,23 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjectModel.Elements;
+import pageObjectModel.LocatorReader;
 import pageObjectModel.SearchAndVerifyProcess_Page;
+import org.testng.asserts.SoftAssert;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class SearchAndVerifyProcess {
     private WebDriver driver = Driver.driver;
     WebDriverWait wait = new WebDriverWait(driver, 5);
     SearchAndVerifyProcess_Page searchAndVerifyProcess_page = new SearchAndVerifyProcess_Page();
-    Elements elementsPage = new Elements(driver);
     private By searchInput = By.name("q");
-
 
     @Given("Navigate to Url")
     public void navigate_to_url() {
@@ -47,12 +50,15 @@ public class SearchAndVerifyProcess {
     @Then("Click the search icon")
     public void click_the_search_icon() throws InterruptedException {
         searchAndVerifyProcess_page.clickSearhButton();
-            Thread.sleep(5000);
+        Thread.sleep(5000);
     }
 
     @Then("Verify that the descriptions")
     public void verify_that_the_descriptions() {
-        Assert.assertTrue("Not all search results contain the search term",
-                searchAndVerifyProcess_page.doSearchResultsContain("happy"));
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(
+                searchAndVerifyProcess_page.doSearchResultsContain("happy"),
+                "Not all search results contain the search term"
+        );
     }
 }

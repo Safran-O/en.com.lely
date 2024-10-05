@@ -49,6 +49,7 @@ public class SelectAndViewProcess {
         selectAndViewProcess_page.switchBackToOriginalTab();
         Thread.sleep(5000);
         selectAndViewProcess_page.downloadDocument();
+        Thread.sleep(5000);
 
         // İndirilen dosyaların olduğu klasör
         String downloadDir = "/Users/onursafran/Downloads";

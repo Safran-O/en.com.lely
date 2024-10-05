@@ -1,0 +1,50 @@
+{
+  "clickSearchableBox": {
+    "type": "xpath",
+    "value": "//*[@class='select2-selection__rendered']"
+  },
+  "clickSearchableBoxSearchArea": {
+    "type": "xpath",
+    "value": "//*[@class='select2-search__field']"
+  },
+  "resultInfo": {
+    "type": "xpath",
+    "value": "//*[@class='select2-results__option select2-level-2 select2-results__option--highlighted']"
+  },
+  "viewThisDoc": {
+    "type": "xpath",
+    "value": "//*[@class='result-item']//*[@class='buttons']//*[@href='https://www.lelynet.com/_layouts/15/document/TechDocHandler.aspx?name=D-S006VT_-.pdf&mode=view']"
+  },
+  "downloadLink2": {
+    "type": "xpath",
+    "value": "//*[@class='result-item']//*[@class='buttons']//*[@href='https://www.lelynet.com/_layouts/15/document/TechDocHandler.aspx?name=D-S006VT_-.pdf&mode=download']"
+  },
+  "clickSearhIcon": {
+    "type": "xpath",
+    "value": "//*[@class='header-navigation-button']//*[@class='header-navigation-button__label']"
+  },
+  "text": {
+    "type": "name",
+    "value": "q"
+  },
+  "clickSearhButton": {
+    "type": "xpath",
+    "value": "//*[@class='button button-tertiary']"
+  },
+  "searchResults": {
+    "type": "xpath",
+    "value": "//*[@class='page-section search-results']"
+  },
+  "searchResultsArea": {
+    "type": "xpath",
+    "value": "//*[@class='wp-block-tc23-post-picker-group rapid-read-enabled rapid-read-date'] //*[@class='wp-block-tc23-post-picker']"
+  },
+  "clickReject": {
+    "type": "id",
+    "value": "cookienotice-button-deny"
+  },
+  "getArticle": {
+    "type": "css",
+    "value": ".item-description"
+  }
+}
